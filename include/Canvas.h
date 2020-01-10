@@ -15,8 +15,11 @@ namespace cobre
 		Canvas(){}
 		Canvas(std::size_t x, std::size_t y):
 			m_frame{x}
-		{
-
+		{	
+			for (std::size_t i; i < y; y++)				
+			{
+				m_frame[i].resize(y);
+			}
 		}
 		void resize(int xSize, int ySize);	
 		void clear();

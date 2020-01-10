@@ -4,6 +4,8 @@ PROJECT(cobre VERSION 0.0.0.0)
 SET(cobre_sources)
 SET(cobre_headers)
 
-add_library(${PROJECT_NAME} ${cobre_headers} ${cobre_sources})
+target_include_directories(include)
+add_executable(${PROJECT_NAME} ${cobre_headers} ${cobre_sources})
+
 
 
