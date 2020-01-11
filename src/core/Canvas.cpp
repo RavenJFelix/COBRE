@@ -1,5 +1,6 @@
 #include "Canvas.h"
 
+#include <cassert>
 #include <iostream>
 #include <stddef.h>
 
@@ -11,6 +12,16 @@ namespace cobre
 		{
 			return m_frame[index];
 		}
+
+		char& Canvas::operator()(std::size_t x, std::size_t y)
+		{
+			assert(x < m_size.x && y < m_size.y && "Out of bounds access"); 
+
+			//The y axis numbers ascend top to bottom. graphicY ascends bottom to top
+			std::size_t graphicY(m_size.y - y);
+			return m_frame[graphicY][x];
+		}
+
 
 		void Canvas::clear()
 		{
@@ -30,6 +41,13 @@ namespace cobre
 			}
 			return out;	
 		}
+
+		/*
+		 * std::ostream& operator<< (Canvas &canvas, const Pixel p)
+		{
+		}
+		*/
+
 
 	}
 }
