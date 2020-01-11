@@ -2,10 +2,13 @@
 #define COBRE_POS_2D_H
 namespace cobre
 {
-	struct Pos2D
+	namespace core
 	{
-		int x;
-		int y;
-	};
+		struct Pos2D
+		{
+			int x;
+			int y;
+		};
+	}
 }
 #endif
