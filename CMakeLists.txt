@@ -8,4 +8,4 @@ add_subdirectory(src)
 add_subdirectory(include)
 message(STATUS ${cobre_headers})
 add_library(cobre ${cobre_sources} ${cobre_headers})
-
+target_include_directories(cobre PUBLIC include)
