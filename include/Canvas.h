@@ -5,28 +5,39 @@
 #include <string>
 #include <vector>
 
+#include "Size2D.h"
 namespace cobre
 {
-	class Canvas
+	namespace core
 	{
-	private:
-		std::vector<std::string> m_frame{};
-	public:
-		Canvas(){}
-		Canvas(std::size_t x, std::size_t y):
-			m_frame{x}
-		{	
-			for (std::size_t i; i < y; y++)				
-			{
-				m_frame[i].resize(y);
-			}
-		}
-		void resize(int xSize, int ySize);	
-		void clear();
-		void paint();
-		std::string& operator[](int lineIndex);
+		class Canvas
+		{
+			private:
+				std::vector<std::string> m_frame{};
+				Size2D m_size{};
+				char m_background{' '};
+			public:
+				Canvas(){}
+				Canvas(std::size_t x, std::size_t y):
+					m_frame{x}, m_size{x, y}
 
-	};
+				{
+					for (std::size_t i{0}; i < y; i++)
+					{
+						m_frame[i].resize(x);
+					}	
+				}
+				void resize(int xSize, int ySize);	
+				void clear();
+				void paint();
+				char getBackground () const {return m_background;}
+				void setBackground (char background) {m_background = background;}
+				Size2D& getSize() {return m_size;}
+				std::string& operator[](int lineIndex);
+				friend std::ostream& operator<< (std::ostream &out, const Canvas &canvas);
+
+		};
+	}
 }
 
 #endif
