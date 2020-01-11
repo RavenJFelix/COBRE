@@ -7,6 +7,5 @@ SET(cobre_headers)
 add_subdirectory(src)
 add_subdirectory(include)
 message(STATUS ${cobre_headers})
-add_executable(cobre ${cobre_sources} ${cobre_headers})
-target_include_directories(${PROJECT_NAME} PUBLIC include)
+add_library(cobre ${cobre_sources} ${cobre_headers})
 
