@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+#include "Pixel.h"
 #include "Size2D.h"
 namespace cobre
 {
@@ -30,11 +31,15 @@ namespace cobre
 				void resize(int xSize, int ySize);	
 				void clear();
 				void paint();
+
 				char getBackground () const {return m_background;}
 				void setBackground (char background) {m_background = background;}
 				Size2D& getSize() {return m_size;}
 				std::string& operator[](int lineIndex);
+				char& operator()(std::size_t x, std::size_t y);
+
 				friend std::ostream& operator<< (std::ostream &out, const Canvas &canvas);
+				friend void operator<< (Canvas &canvas, const Pixel p);
 
 		};
 	}

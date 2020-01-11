@@ -4,12 +4,15 @@
 
 namespace cobre
 {
-	struct Pixel
+	namespace core
 	{
-		Pos2D m_pos;
-		int m_zdepth;
-		char m_texture;
-	};
+		struct Pixel
+		{
+			Pos2D m_pos;
+			char m_texture;
+			int m_zdepth;
+		};
+	}
 }
 
 #endif

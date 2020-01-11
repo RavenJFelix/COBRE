@@ -42,11 +42,12 @@ namespace cobre
 			return out;	
 		}
 
-		/*
-		 * std::ostream& operator<< (Canvas &canvas, const Pixel p)
+		
+		void operator<< (Canvas &canvas, const Pixel p)
 		{
+			canvas(p.m_pos.x, p.m_pos.y) = p.m_texture;
 		}
-		*/
+
 
 
 	}
