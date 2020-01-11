@@ -4,8 +4,9 @@ PROJECT(cobre VERSION 0.0.0.0)
 SET(cobre_sources)
 SET(cobre_headers)
 
-target_include_directories(include)
-add_executable(${PROJECT_NAME} ${cobre_headers} ${cobre_sources})
-
-
+add_subdirectory(src)
+add_subdirectory(include)
+message(STATUS ${cobre_headers})
+add_executable(cobre ${cobre_sources} ${cobre_headers})
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 

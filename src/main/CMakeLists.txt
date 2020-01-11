@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.16.1 FATAL_ERROR)
-
-target_sources(cobre
-	PRIVATE
+set (dir_src
 	main.cpp)
+list(TRANSFORM dir_src PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
+
+set(cobre_sources
+	${cobre_sources}
+	${dir_src}
+	PARENT_SCOPE)
+	

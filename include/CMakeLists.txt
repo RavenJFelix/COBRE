@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.16.1 FATAL_ERROR)
+
+set(dir_headers
+	Canvas.h
+	Pixel.h
+	Pos2D.h
+	Rengine.h)
+		
+list(TRANSFORM dir_headers PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
+
+set(cobre_headers
+	${cobre_headers}
+	${dir_headers}
+	PARENT_SCOPE)
