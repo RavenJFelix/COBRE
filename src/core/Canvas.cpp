@@ -22,7 +22,6 @@ namespace cobre
 			return m_frame[graphicY][x];
 		}
 
-
 		void Canvas::clear()
 		{
 			std::string blank(m_size.x, m_background);
@@ -41,7 +40,6 @@ namespace cobre
 			}
 			return out;	
 		}
-
 		
 		void operator<< (Canvas &canvas, const Pixel p)
 		{
