@@ -43,7 +43,7 @@ namespace cobre
 		
 		void operator<< (Canvas &canvas, const Pixel p)
 		{
-			canvas(p.m_pos.x, p.m_pos.y) = p.m_texture;
+			canvas(p.pos.x, p.pos.y) = p.texture;
 		}
 
 
