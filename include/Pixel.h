@@ -1,5 +1,6 @@
 #ifndef COBRE_PIXEL_H
 #define COBRE_PIXEL_H
+#include "CobreDef.h"
 #include "Pair2D.h"
 
 #include <stdlib.h>
@@ -10,9 +11,8 @@ namespace cobre
 	{
 		struct Pixel
 		{
-			using  pos_t = Pair2D<std::size_t>;
 			
-			pos_t m_pos;
+			canvasPos_t m_pos;
 			char m_texture;
 			int m_zdepth;
 		};

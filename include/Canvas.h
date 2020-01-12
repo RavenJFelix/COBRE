@@ -1,12 +1,14 @@
 #ifndef COBRE_CANVAS_H
 #define COBRE_CANVAS_H
+#include "CobreDef.h"
+#include "Pixel.h"
+#include "Pair2D.h"
+
 #include <cassert>
 #include <iostream>
 #include <string>
 #include <vector>
 
-#include "Pixel.h"
-#include "Pair2D.h"
 namespace cobre
 {
 	namespace core
@@ -14,9 +16,8 @@ namespace cobre
 		class Canvas
 		{
 			private:
-				using Size2D = Pair2D<std::size_t>;
 				std::vector<std::string> m_frame{};
-				Size2D m_size{};
+				size2d_t m_size{};
 				char m_background{' '};
 			public:
 				Canvas(){}
@@ -35,7 +36,7 @@ namespace cobre
 
 				char getBackground () const {return m_background;}
 				void setBackground (char background) {m_background = background;}
-				Size2D& getSize() {return m_size;}
+				size2d_t& getSize() {return m_size;}
 				std::string& operator[](int lineIndex);
 				char& operator()(std::size_t x, std::size_t y);
 
