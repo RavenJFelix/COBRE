@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "Pixel.h"
-#include "Size2D.h"
+#include "Pair2D.h"
 namespace cobre
 {
 	namespace core
@@ -14,6 +14,7 @@ namespace cobre
 		class Canvas
 		{
 			private:
+				using Size2D = Pair2D<std::size_t>;
 				std::vector<std::string> m_frame{};
 				Size2D m_size{};
 				char m_background{' '};

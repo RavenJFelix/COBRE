@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.1 FATAL_ERROR)
 set(dir_headers
 	Canvas.h
 	Pixel.h
-	Pos2D.h
+	Pair2D.h
 	Rengine.h)
 		
 list(TRANSFORM dir_headers PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
