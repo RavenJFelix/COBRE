@@ -2,10 +2,10 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <expr> <Down> pumvisible() ? "\" : "\<Down>"
-inoremap <expr> <S-Tab> pumvisible() ? "\" : "\<S-Tab>"
-inoremap <expr> <Up> pumvisible() ? "\" : "\<Up>"
 imap <Nul> <C-Space>
+inoremap <expr> <Up> pumvisible() ? "\" : "\<Up>"
+inoremap <expr> <S-Tab> pumvisible() ? "\" : "\<S-Tab>"
+inoremap <expr> <Down> pumvisible() ? "\" : "\<Down>"
 inoremap <C-U> u
 map Q gq
 nnoremap \d :YcmShowDetailedDiagnostic
@@ -14,9 +14,10 @@ nmap \b <Plug>(CommandTBuffer)
 nmap \t <Plug>(CommandT)
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-nnoremap <SNR>35_: :=v:count ? v:count : ''
-nnoremap <SNR>39_: :=v:count ? v:count : ''
+nnoremap <SNR>36_: :=v:count ? v:count : ''
 nnoremap <SNR>38_: :=v:count ? v:count : ''
+nnoremap <SNR>39_: :=v:count ? v:count : ''
+nnoremap <SNR>35_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <silent> <Plug>(CommandTTag) :CommandTTag
@@ -350,10 +351,10 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 4
-normal! 022|
+normal! 017|
 lcd ~/Documents/Github/cobre
 tabnext
-edit ~/Documents/Github/cobre/src/main/CMakeLists.txt
+edit ~/Documents/Github/cobre/include/CMakeLists.txt
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -490,23 +491,23 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 5
-normal! 017|
+normal! 0
 lcd ~/Documents/Github/cobre
-tabnext 2
+tabnext 3
 set stal=1
+badd +8 ~/Documents/Github/cobre/CMakeLists.txt
+badd +0 ~/Documents/Github/cobre/src/CMakeLists.txt
+badd +0 ~/Documents/Github/cobre/src/main/CMakeLists.txt
 badd +6 ~/Documents/Github/cobre/include/Pixel.h
 badd +1 ~/Documents/Github/cobre/include/Pos2D.h
 badd +13 ~/Documents/Github/cobre/include/Rengine.h
-badd +1 ~/Documents/Github/cobre
 badd +10 ~/Documents/Github/cobre/include/Position.h
 badd +1 ~/Documents/Github/cobre/include/Canvas.h
-badd +8 ~/Documents/Github/cobre/CMakeLists.txt
 badd +6 ~/Documents/Github/cobre/tests/Test.h
 badd +16 ~/Documents/Github/cobre/tests/Test.cpp
-badd +7 ~/Documents/Github/cobre/src/CMakeLists.txt
 badd +5 ~/Documents/Github/cobre/src/core/CMakeLists.txt
 badd +12 ~/Documents/Github/cobre/src/main/main.cpp
-badd +1 ~/Documents/Github/cobre/src/main/CMakeLists.txt
+badd +0 ~/Documents/Github/cobre/include/CMakeLists.txt
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
