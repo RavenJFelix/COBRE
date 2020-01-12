@@ -10,12 +10,12 @@ namespace cobre
 		class PixelBuffer
 		{
 		private:
-			std::vector<Pixel> m_Pixels{};
+			std::vector<Pixel> m_pixels{};
 		
 		public:
 			PixelBuffer(){}
 			PixelBuffer(std::size_t size):
-				m_Pixels{size}
+				m_pixels{size}
 			{
 			}
 			/**
