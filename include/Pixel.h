@@ -12,10 +12,11 @@ namespace cobre
 		struct Pixel
 		{
 			
-			canvasPos_t m_pos;
-			char m_texture;
-			int m_zdepth;
+			canvasPos_t pos;
+			char texture;
+			int zdepth;
 		};
+		bool depthComp(const Pixel &p1, const Pixel &p2);
 	}
 }
 
