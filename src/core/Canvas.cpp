@@ -41,11 +41,17 @@ namespace cobre
 			return out;	
 		}
 		
-		void operator<< (Canvas &canvas, const Pixel p)
+		void operator<< (Canvas &canvas, const Pixel &p)
 		{
 			canvas(p.pos.x, p.pos.y) = p.texture;
 		}
-
+		void operator<< (Canvas &canvas, const PixelBuffer &buff)
+		{
+			for(std::size_t i; i < buff.size(); i++)
+			{
+				canvas << buff[i];
+			}	
+		}
 
 
 	}

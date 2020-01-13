@@ -15,6 +15,12 @@ namespace cobre
 		{
 			return m_pixels[index];
 		}
+		const Pixel& PixelBuffer::operator[] (std::size_t index) const
+		{
+			return m_pixels[index];
+		}
+
+
 
 	}
 }

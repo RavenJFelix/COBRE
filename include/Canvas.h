@@ -1,8 +1,9 @@
 #ifndef COBRE_CANVAS_H
 #define COBRE_CANVAS_H
 #include "CobreDef.h"
-#include "Pixel.h"
 #include "Pair2D.h"
+#include "Pixel.h"
+#include "PixelBuffer.h"
 
 #include <cassert>
 #include <iostream>
@@ -41,7 +42,8 @@ namespace cobre
 				char& operator()(std::size_t x, std::size_t y);
 
 				friend std::ostream& operator<< (std::ostream &out, const Canvas &canvas);
-				friend void operator<< (Canvas &canvas, const Pixel p);
+				friend void operator<< (Canvas &canvas, const Pixel &p);
+				friend void operator<< (Canvas &canvas, const PixelBuffer &buff); 
 
 		};
 	}
