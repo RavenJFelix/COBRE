@@ -22,6 +22,7 @@ namespace cobre
 			 * Sorts all Pixels in ascending order by zdepth
 			 * so higher pixels take precedence in the final render
 			 */
+			std::size_t size() {return m_pixels.size();}
 			void zSort();
 			Pixel& operator[] (std::size_t index);
 		};
