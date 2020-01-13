@@ -18,8 +18,9 @@ namespace cobre
 			assert(x < m_size.x && y < m_size.y && "Out of bounds access"); 
 
 			//The y axis numbers ascend top to bottom. graphicY ascends bottom to top
-			std::size_t graphicY(m_size.y - y);
-			return m_frame[graphicY][x];
+			std::size_t graphicY(m_size.y - y - 1);
+			std::size_t graphicX(m_size.x - x - 1);
+			return m_frame[graphicY][graphicX];
 		}
 
 		void Canvas::clear()

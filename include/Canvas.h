@@ -40,7 +40,6 @@ namespace cobre
 				size2d_t& getSize() {return m_size;}
 				std::string& operator[](int lineIndex);
 				char& operator()(std::size_t x, std::size_t y);
-
 				friend std::ostream& operator<< (std::ostream &out, const Canvas &canvas);
 				friend void operator<< (Canvas &canvas, const Pixel &p);
 				friend void operator<< (Canvas &canvas, const PixelBuffer &buff); 
