@@ -19,8 +19,7 @@ namespace cobre
 
 			//The y axis numbers ascend top to bottom. graphicY ascends bottom to top
 			std::size_t graphicY(m_size.y - y - 1);
-			std::size_t graphicX(m_size.x - x - 1);
-			return m_frame[graphicY][graphicX];
+			return m_frame[graphicY][x];
 		}
 
 		void Canvas::clear()
