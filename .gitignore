@@ -1,4 +1,5 @@
 #vim files
 *.swp
 *.*.swp
+*.vim
 build
