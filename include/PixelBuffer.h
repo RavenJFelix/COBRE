@@ -28,7 +28,8 @@ namespace cobre
 			Pixel& operator[] (std::size_t index);
 			const Pixel& operator[] (std::size_t index) const;
 			friend void operator<< (PixelBuffer &buffer, Pixel &p);
-			friend void operator<< (Canvas &canvas, const PixelBuffer &buff); 
+			friend void operator<< (Canvas &canvas, const PixelBuffer &buff);
+			friend void operator<< (PixelBuffer &destBuff, PixelBuffer &sourceBuff);
 
 			void zSort();
 			void clear();

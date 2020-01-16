@@ -2,6 +2,7 @@
 #include "Pixel.h"
 
 #include <algorithm>
+#include <iterator>
 namespace cobre
 {
 	namespace core
@@ -25,6 +26,12 @@ namespace cobre
 		void operator<< (PixelBuffer &buffer, Pixel &p)
 		{
 			buffer.m_pixels.push_back(std::move(p));		
+		}
+		void operator<< (PixelBuffer &destBuff, PixelBuffer &sourceBuff)
+		{
+			destBuff.m_pixels.insert(destBuff.m_pixels.end(),
+						std::make_move_iterator(sourceBuff.m_pixels.begin()),
+						std::make_move_iterator(sourceBuff.m_pixels.end()));
 		}
 
 		void PixelBuffer::clear()
