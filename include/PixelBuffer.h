@@ -2,11 +2,13 @@
 #define COBRE_PIXEL_BUFFER_H
 #include "Pixel.h"
 
+
 #include <vector>
 namespace cobre
 {
 	namespace core
 	{
+		class Canvas;
 		class PixelBuffer
 		{
 		private:
@@ -26,6 +28,7 @@ namespace cobre
 			Pixel& operator[] (std::size_t index);
 			const Pixel& operator[] (std::size_t index) const;
 			friend void operator<< (PixelBuffer &buffer, Pixel &p);
+			friend void operator<< (Canvas &canvas, const PixelBuffer &buff); 
 
 			void zSort();
 			void clear();
