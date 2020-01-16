@@ -32,7 +32,5 @@ namespace cobre
 
 			m_pixels.clear();
 		}
-
-
 	}
 }
