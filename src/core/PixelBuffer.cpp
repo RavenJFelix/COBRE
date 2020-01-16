@@ -21,9 +21,10 @@ namespace cobre
 		{
 			return m_pixels[index];
 		}
+
 		void operator<< (PixelBuffer &buffer, Pixel &p)
 		{
-			buffer.m_pixels.push_back(p);		
+			buffer.m_pixels.push_back(std::move(p));		
 		}
 
 		void PixelBuffer::clear()
