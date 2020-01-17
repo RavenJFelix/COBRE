@@ -23,7 +23,7 @@ the creation of graphical video games with ease. It can interface with Curses in
 display the frames to the console; however, it can be interfaced to anything, even directly
 to a specific console environment.
 
-In other words, COBRE is designed to be flexible. _(And a success in the end)_
+In other words, COBRE is designed to be flexible. 
 
 Origins
 -------
