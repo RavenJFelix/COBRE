@@ -27,9 +27,7 @@ In other words, COBRE is designed to be flexible. _(And a success in the end)_
 
 Origins
 -------
-Imagine learning c++ and desiring to go beyond the regular old console application.
-You start learning about compilers and the magic of vim and hear of something called
-QT. However, QT for the most part requires the use of their IDE. _(Of course, any programmer
-needs to be capable in just about any environment; however, now is not the time for learning
-of such right now as you have already done so with Code::Blocks)_ so out of rage you end up
-creating your own gui system.
+Imagine learning c++, you start learning about compilers, command line and the magic of vim and hear of something called
+QT. However, QT for the most part requires the use of their IDE so out of rage you end up creating your own gui system. _Because bitch, I've got a nearly decades old laptop with a mere i3 processor._ 
+
+Now do I use the firefox command to start browsing instead of using the quick menue? Sadly yes.
