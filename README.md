@@ -18,7 +18,7 @@ create text-based-graphical user interfaces but to create anything they need in 
 from animations to video games.
 
 ## Doesn't Curses provide the functionality?
-Cursees provides build in __User interface__ functionality; COBRE goes beyond and allows
+Curses provides built in __User interface__ functionality; COBRE goes beyond and allows
 the creation of graphical video games with ease. It can interface with Curses in order to
 display the frames to the console; however, it can be interfaced to anything, even directly
 to a specific console environment.
