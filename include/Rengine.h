@@ -18,8 +18,10 @@ namespace cobre
                Canvas m_frame;
                 
             public:
-                Rengine(){}
-                
+               Rengine(std::size_t frameX, std::size_t frameY):
+                   m_frame{frameX, frameY}
+               {
+               }
                 void render();
 
                 friend std::ostream& operator<<(std::ostream &out, Rengine &rengine);
