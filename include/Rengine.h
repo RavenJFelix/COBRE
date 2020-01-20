@@ -14,15 +14,17 @@ namespace cobre
         class Rengine
         {
             private:
-               PixelBuffer m_pixels;
-               Canvas m_frame;
-                
+                PixelBuffer m_pixels;
+                Canvas m_frame;
+
             public:
-               Rengine(std::size_t frameX, std::size_t frameY):
-                   m_frame{frameX, frameY}
-               {
-               }
+                Rengine(std::size_t frameX, std::size_t frameY):
+                    m_frame{frameX, frameY}
+                {
+                }
                 void render();
+
+                void resize(std::size_t x, std::size_t y);
 
                 friend std::ostream& operator<<(std::ostream &out, Rengine &rengine);
                 friend void operator<<(Rengine &rengine, PixelBuffer &buffer);

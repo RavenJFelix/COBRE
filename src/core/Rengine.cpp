@@ -19,6 +19,12 @@ namespace cobre
         {
             rengine.m_frame << buffer;
         }
+
+        void Rengine::resize(std::size_t x, std::size_t y)
+        {
+            m_frame.resize(x, y);
+        }
+
     }
 }
 
