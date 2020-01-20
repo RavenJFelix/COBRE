@@ -25,6 +25,7 @@ namespace cobre
                 void render();
 
                 void resize(std::size_t x, std::size_t y);
+                size2d_t size() {return m_frame.getSize();}
 
                 friend std::ostream& operator<<(std::ostream &out, Rengine &rengine);
                 friend void operator<<(Rengine &rengine, PixelBuffer &buffer);
