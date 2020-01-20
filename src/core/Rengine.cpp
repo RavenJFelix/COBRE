@@ -18,7 +18,7 @@ namespace cobre
 
         void operator<<(Rengine &rengine, PixelBuffer &buffer)
         {
-            rengine.m_frame << buffer;
+            rengine.m_pixels << buffer;
         }
 
         void Rengine::resize(std::size_t x, std::size_t y)
