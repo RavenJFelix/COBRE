@@ -381,11 +381,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((13 * winheight(0) + 9) / 19)
+let s:l = 43 - ((13 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
+43
 normal! 0
 lcd ~/Documents/Github/cobre
 tabnext
@@ -522,12 +522,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 27 - ((11 * winheight(0) + 9) / 19)
+let s:l = 25 - ((12 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 018|
+25
+normal! 052|
 lcd ~/Documents/Github/cobre
 tabnext
 edit ~/Documents/Github/cobre/src/core/Rengine.cpp
@@ -663,11 +663,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 6 - ((5 * winheight(0) + 9) / 19)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+6
 normal! 05|
 lcd ~/Documents/Github/cobre
 tabnext 4
