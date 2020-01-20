@@ -27,6 +27,7 @@ namespace cobre
 		{
 			buffer.m_pixels.push_back(std::move(p));		
 		}
+
 		void operator<< (PixelBuffer &destBuff, PixelBuffer &sourceBuff)
 		{
 			destBuff.m_pixels.insert(destBuff.m_pixels.end(),
