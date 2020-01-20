@@ -8,6 +8,16 @@ namespace cobre
 {
 	namespace core
 	{
+		void Canvas::resize(std::size_t xSize, std::size_t ySize)
+		{
+			m_frame.resize(ySize);
+			for(std::size_t i{0}; i < ySize; i++)
+			{
+				m_frame[i].resize(xSize);
+			}
+			m_size = size2d_t{xSize, ySize};
+		}
+
 		std::string& Canvas::operator[](int index)
 		{
 			return m_frame[index];
