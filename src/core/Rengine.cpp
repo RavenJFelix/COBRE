@@ -6,6 +6,7 @@ namespace cobre
     {
         void Rengine::render()
         {
+            m_frame.clear();
             m_pixels.zSort();
             m_frame << m_pixels;
         }
