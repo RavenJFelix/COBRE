@@ -24,10 +24,7 @@ namespace cobre
 
                 friend std::ostream& operator<<(std::ostream &out, Rengine &rengine);
                 friend void operator<<(Rengine &rengine, PixelBuffer &buffer);
-                friend void operator<<(Rengine &rengine, std::vector<Pixel>);
-
-
-
+                //friend void operator<<(Rengine &rengine, std::vector<Pixel>);
         };
     }
 }	
