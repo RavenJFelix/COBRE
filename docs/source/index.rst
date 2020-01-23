@@ -7,9 +7,12 @@ Welcome to COBRE's documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: General
+   :name: sec-general
 
+   about/index
+   
 
 
 Indices and tables
