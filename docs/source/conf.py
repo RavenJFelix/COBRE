@@ -16,7 +16,7 @@
 
 
 # -- Project information -----------------------------------------------------
-
+extensions = ['recommonmark']
 project = 'COBRE'
 copyright = '2020, Raven Jyro Felix'
 author = 'Raven Jyro Felix'
