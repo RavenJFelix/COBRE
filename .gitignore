@@ -4,3 +4,5 @@
 *.vim
 build
 .clang
+*.*.swo
+*.swo
