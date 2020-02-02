@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16.1 FATAL_ERROR)
 
 set(dir_headers
 	Canvas.h
+        CobreDef.h
+        Gelement.h
 	Pair2D.h
 	Pixel.h
 	PixelBuffer.h
